@@ -1,0 +1,162 @@
+body{
+    font-family: 'Work Sans', sans-serif;
+}
+:root{
+    --main-color:#10cab7;
+    --section-padding: 60px;
+    --section-background: #f9f9f9;
+}
+/* small */
+@media (min-width:768px) {
+    .contener{
+        width: 750px;
+    }
+    
+}
+/* medim */
+@media (min-width:992px) {
+    .contener{
+        width: 970px;
+    }
+    
+}
+/* large */
+@media (min-width:1200px) {
+    .contener{
+        width: 1170px;
+    }
+    
+}
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+/* start header */
+.header{
+    padding: 20px;
+}
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .container .logo{
+    width: 60px;
+}
+.header .links {
+    position: relative;
+}
+.header .links:hover .icon span:nth-child(2) {
+    width: 100%;
+}
+.header .links .icon {
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.header .links .icon span {
+    background-color: #333;
+    margin-bottom: 5px;
+    height: 2px;
+}
+.header .links .icon span:first-child {
+    width: 100%;
+}
+.header .links .icon span:nth-child(2) {
+    width: 60%;
+    transition: var(--main-duration);
+}
+.header .links .icon span:last-child {
+    width: 100%;
+}
+.header .container ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    min-width: 200px;
+    right: 0;
+    position: absolute;
+    background-color: var(--section-background);
+    top: calc(100% + 15px);
+    display: none;
+    z-index: 1;
+}
+.header .links:hover ul{
+    display: block;
+}
+.header .container ul::before{
+    content: "";
+    position: absolute;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #f9f9f9 transparent;
+    right: 5px;
+    top: -20px;
+}
+.header .container ul li a{
+    text-decoration: none;
+    display: block;
+    padding: 15px;
+    color: #333;
+    transition: .3s;
+}
+.header .links ul li a:hover{
+    padding-left: 25px;
+}
+.header .links ul li:not(:last-child){
+    border-bottom: 1px solid #ddd;
+}
+.landing{
+    background-image: url(../image/wp7558832.webp);
+    background-size: cover;
+    height: calc(100vh - 64px);
+    position: relative;
+}
+.landing .intro-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 320px;
+    max-width: 100%;
+}
+.landing .intro-text h1{
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 50px;
+    margin: 0;
+}
+.landing .intro-text p{
+    font-size: 19px;
+    line-height: 1.8;
+}
+.features{
+    padding-top:var(--section-padding) ;
+    padding-bottom:var(--section-padding) ;
+    background-color: var(--section-background);
+}
+.features .grid3{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+.features .feat{
+    padding: 20px;
+    text-align: center;
+}
+.features .feat i{
+    color: var(--main-color);
+}
+.features .feat h3{
+    margin: 30px 0;
+    font-weight: 800;
+}
+.features .feat p{
+    color: #777;
+    line-height: 1.8;
+    font-size: 17px;
+}
