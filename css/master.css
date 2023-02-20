@@ -12,21 +12,21 @@ html{
 }
 /* small */
 @media (min-width:768px) {
-    .contener{
+    .container{
         width: 750px;
     }
     
 }
 /* medim */
 @media (min-width:992px) {
-    .contener{
+    .container{
         width: 970px;
     }
     
 }
 /* large */
 @media (min-width:1200px) {
-    .contener{
+    .container{
         width: 1170px;
     }
     
